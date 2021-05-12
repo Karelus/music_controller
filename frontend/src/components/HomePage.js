@@ -10,13 +10,17 @@ export default class HomePage extends Component {
     }
 
     render() {
-        return (<Router>
+        return (
+        <Router>
             <Switch>
-                <Route exact path='/' component=''><p>This is the home page!</p></Route>
-                    <Route path='/join' component={RoomJoinPage}></Route>
-                    <Route path='/create' component={CreateRoomPage}></Route>
-                    <Route path='/room/:roomCode' component={Room}></Route>
+                <Route exact path='/' component=''>
+                <p>This is the home page!</p>
+                </Route>
+                <Route path='/join' component={RoomJoinPage}></Route>
+                <Route path='/create' component={CreateRoomPage}></Route>
+                <Route path='/room/:roomCode' component={Room}></Route>
             </Switch>
-        </Router>);
+        </Router>
+        );
     }
 }
